@@ -23,4 +23,25 @@ public class StudentSorterTest {
     List<Student> sortedStudents = studentSorter.sort(students);
     Assert.assertEquals("Rumpa", sortedStudents.get(4).getFirstName());
   }
+
+  @Test
+  public void sortStudentEmptyList() {
+    List<Student> students = Arrays.asList();
+    List<Student> sortedStudents = studentSorter.sort(students);
+    Assert.assertEquals(0 , sortedStudents.size());
+  }
+
+  @Test
+  public void sortStudentByCGPANameId() {
+    List<Student> students = Arrays.asList(
+        new Student(33,"Rumpa", 3.68),
+        new Student(85,"Ashish", 3.85),
+        new Student(56,"Samiha", 3.75),
+        new Student(19,"Samara", 3.75),
+        new Student(22,"Fahim", 3.76),
+        new Student(12,"Samara", 3.75));
+
+    List<Student> sortedStudents = studentSorter.sort(students);
+    Assert.assertEquals(12, sortedStudents.get(2).getId());
+  }
 }
