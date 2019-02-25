@@ -30,7 +30,7 @@ public class StudentSorter {
     students = sort(students);
 
     for(Student student : students) {
-      System.out.println(student.getId() + " - " +student.getFirstName() + " - " + student.getCgpa());
+      System.out.println(student.getId() + " - " +student.getName() + " - " + student.getCgpa());
     }
   }
 }

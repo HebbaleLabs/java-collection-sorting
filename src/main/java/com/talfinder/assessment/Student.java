@@ -7,13 +7,13 @@ public class Student {
 
   private int id;
 
-  private String firstName;
+  private String name;
 
   private double cgpa;
 
-  public Student(int id, String firstName, double cgpa) {
+  public Student(int id, String name, double cgpa) {
     this.id = id;
-    this.firstName = firstName;
+    this.name = name;
     this.cgpa = cgpa;
   }
 
@@ -25,12 +25,12 @@ public class Student {
     this.id = id;
   }
 
-  public String getFirstName() {
-    return firstName;
+  public String getName() {
+    return name;
   }
 
-  public void setFirstName(String firstName) {
-    this.firstName = firstName;
+  public void setName(String name) {
+    this.name = name;
   }
 
   public double getCgpa() {
