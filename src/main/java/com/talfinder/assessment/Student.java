@@ -40,4 +40,13 @@ public class Student {
   public void setCgpa(double cgpa) {
     this.cgpa = cgpa;
   }
+
+  @Override
+  public String toString() {
+    return "{" +
+        "id=" + id +
+        ", name='" + name + '\'' +
+        ", cgpa=" + cgpa +
+        '}';
+  }
 }
